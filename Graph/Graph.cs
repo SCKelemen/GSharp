@@ -5,17 +5,17 @@ namespace Graph
 {
     public class Graph<T>
     {
-        private List<T> _vertices;
+        private List<Vertex<T>> _vertices;
         private List<Edge<T>> _edges;
         
         public Graph()
         {
-            _vertices = new List<T>();
+            _vertices = new List<Vertex<T>>();
             _edges = new List<Edge<T>>();
         }
-        public Graph(IEnumerable<T> vertices, IEnumerable<Edge<T>> edges)
+        public Graph(IEnumerable<Vertex<T>> vertices, IEnumerable<Edge<T>> edges)
         {
-            _vertices = new List<T>(vertices);
+            _vertices = new List<Vertex<T>>(vertices);
             _edges = new List<Edge<T>>(edges);
         }
 
@@ -34,7 +34,7 @@ namespace Graph
             return this;
         }
 
-        public Graph<T> AddVertex(T vertex)
+        public Graph<T> AddVertex(Vertex<T> vertex)
         {
             if (!_vertices.Contains(vertex))
             {
@@ -43,9 +43,9 @@ namespace Graph
             return this;
         }
 
-        public Graph<T> AddVertices(params T[] vertices)
+        public Graph<T> AddVertices(params Vertex<T>[] vertices)
         {
-            foreach (T vertex in vertices)
+            foreach (Vertex<T> vertex in vertices)
             {
                 this.AddVertex(vertex);
             }
@@ -60,7 +60,7 @@ namespace Graph
             }
             return this;
         }
-        public Graph<T> AddEdge(T src, T dst)
+        public Graph<T> AddEdge(Vertex<T> src, Vertex<T> dst)
         {
             Edge<T> edge = new Edge<T>(src, dst);
             return this.AddEdge(edge);            
@@ -84,9 +84,9 @@ namespace Graph
         public void PrintVertices()
         {
             Console.WriteLine("Vertices:");
-            foreach(T vertex in this._vertices)
+            foreach(Vertex<T> vertex in this._vertices)
             {
-                Console.WriteLine($"\t {vertex}");
+                Console.WriteLine($"\t v{vertex.Value}");
             }
         }
 
@@ -95,7 +95,7 @@ namespace Graph
             Console.WriteLine("Edges:");
             foreach(Edge<T> edge in this._edges)
             {
-                Console.WriteLine($"\t ({edge.Source})\t ->\t ({edge.Destination})");
+                Console.WriteLine($"\t (v{edge.Source.Value})\t ->\t (v{edge.Destination.Value})");
             }
         }
 
@@ -103,15 +103,26 @@ namespace Graph
 
     public class Edge<T>
     {
-        private readonly T _source, _destination; 
-        public Edge(T source, T destination)
+        private readonly Vertex<T> _source, _destination; 
+        public Edge(Vertex<T> source, Vertex<T> destination)
         {
             _source = source;
             _destination = destination;
         }
         
-        public T Source => _source;
-        public T Destination => _destination;
+        public Vertex<T> Source => _source;
+        public Vertex<T> Destination => _destination;
+    }
+
+    public class Vertex<T>
+    {
+        private readonly T _value;
+        public Vertex(T value)
+        {
+            _value = value;
+        }
+
+        public T Value => _value;
     }
     
 }

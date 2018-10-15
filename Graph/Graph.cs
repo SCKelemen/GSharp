@@ -71,7 +71,7 @@ namespace Graph
             {
                 this.AddEdge(edge);
             }
-            return this;;
+            return this;
         }
 
         public void Print()

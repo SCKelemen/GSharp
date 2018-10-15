@@ -1,0 +1,10 @@
+/Users/Kelemen/Desktop/Research/gsharp/bin/Debug/netcoreapp2.0/gsharp.deps.json
+/Users/Kelemen/Desktop/Research/gsharp/bin/Debug/netcoreapp2.0/gsharp.runtimeconfig.json
+/Users/Kelemen/Desktop/Research/gsharp/bin/Debug/netcoreapp2.0/gsharp.runtimeconfig.dev.json
+/Users/Kelemen/Desktop/Research/gsharp/bin/Debug/netcoreapp2.0/gsharp.dll
+/Users/Kelemen/Desktop/Research/gsharp/bin/Debug/netcoreapp2.0/gsharp.pdb
+/Users/Kelemen/Desktop/Research/gsharp/obj/Debug/netcoreapp2.0/gsharp.csproj.CoreCompileInputs.cache
+/Users/Kelemen/Desktop/Research/gsharp/obj/Debug/netcoreapp2.0/gsharp.AssemblyInfoInputs.cache
+/Users/Kelemen/Desktop/Research/gsharp/obj/Debug/netcoreapp2.0/gsharp.AssemblyInfo.cs
+/Users/Kelemen/Desktop/Research/gsharp/obj/Debug/netcoreapp2.0/gsharp.dll
+/Users/Kelemen/Desktop/Research/gsharp/obj/Debug/netcoreapp2.0/gsharp.pdb
